@@ -1,0 +1,4 @@
+<div [ngStyle]="{width:width+'px',height:height+'px'}">
+    <img [ngClass]="{hidden: !loaded}"  src="{{picture.downloadUrl}}" alt="{{picture.author}}" (load)="setLoaded()" [ngStyle]="{width:width+'px',height:height+'px'}" />
+</div>
+
