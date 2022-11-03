@@ -1,0 +1,6 @@
+<h1>Pictures</h1>
+<app-loading [showLoading]="apiResponse.loading"></app-loading>
+<div *ngFor="let picture of pictures">
+    <app-picture [picture]="picture"></app-picture>
+</div>
+
