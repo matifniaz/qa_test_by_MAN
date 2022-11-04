@@ -16,10 +16,8 @@ export class PicturesListViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.get('list').subscribe(r => {
-      console.log(r)
       this.apiResponse.ready(r);
       this.pictures = [...this.apiResponse.data.map((d:any) => new Picture(d))]
-      console.log(this.pictures)
     })
   }
 

@@ -11,5 +11,11 @@ class Picture extends Asset {
         this.width = data.width;
         this.height = data.height;
     }
+    canBeDownloaded():boolean{
+        if(this.width>1999 && this.height>1999){
+            return true
+        }
+        return false
+    }
 }
 export default Picture

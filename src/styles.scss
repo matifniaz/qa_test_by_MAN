@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+html, body, div, h1, h2, p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.display-block {
+    display: block;
+}
+.hidden {
+    opacity: 0;  
+}
+.button {
+    padding-left: .5em;
+    padding-right: .5em;
+    &:hover{
+        text-decoration: underline;
+    }
+}

@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import getFileName from 'src/app/helpers/getFileName';
 import Picture from 'src/app/models/Picture/Picture';
 
 @Component({
@@ -12,11 +13,6 @@ export class PictureComponent implements OnChanges {
   height: number = 200;
   width: number = 0;
 
-  constructor() {
-    console.log(this.picture.width, this.picture.height)
-
-  }
-
   ngOnChanges(changes: SimpleChanges): void {
       const param = 'picture';
       // console.log(changes);
@@ -28,6 +24,14 @@ export class PictureComponent implements OnChanges {
 
   setLoaded() {
     this.loaded = true  
+  }
+
+  download() {
+    const a: HTMLAnchorElement = document.createElement('a');
+    a.href = this.picture.downloadUrl;
+    a.setAttribute('download',getFileName(this.picture.downloadUrl))
+    a.rel="noopener noreferrer"
+    a.click()
   }
 
 }
