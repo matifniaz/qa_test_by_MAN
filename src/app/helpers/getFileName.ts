@@ -4,9 +4,9 @@
  * @returns fileName
  */
 function getFileName(webUrl: string): string {
-    // webUrl = webUrl.split(/\?/)[0]
+    webUrl = webUrl.split(/\?/)[0]
     const parts = webUrl.split(/\//)
-    console.log(parts);
+    // console.log(parts);
     return parts[parts.length-1]
 }
 

@@ -4,9 +4,9 @@
     </div>
     <div class="display-block" >
         <div class="info-container">
-            <span *ngIf="picture.canBeDownloaded()===false">Only: {{picture.width}} x {{picture.height}}</span>
+            <span *ngIf="picture.canBeDownloaded===false">Only: {{picture.width}} x {{picture.height}}</span>
             <span 
-                *ngIf="picture.canBeDownloaded()" 
+                *ngIf="picture.canBeDownloaded" 
                 class="button download"
                 (click)="download()"
                 >Download</span>

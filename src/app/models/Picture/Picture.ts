@@ -3,6 +3,7 @@ import Asset from "../Asset/Asset";
 class Picture extends Asset {
     width: number = 0;
     height: number = 0;
+    canBeDownloaded: boolean = false;
     constructor(data: any){
         super(data)
         if(typeof(data.width)==='undefined' || typeof(data.height)==='undefined'){
@@ -10,8 +11,9 @@ class Picture extends Asset {
         }
         this.width = data.width;
         this.height = data.height;
+        this.canBeDownloaded = this.checkIfCanBeDownloaded()
     }
-    canBeDownloaded():boolean{
+    checkIfCanBeDownloaded():boolean{
         if(this.width>1999 && this.height>1999){
             return true
         }
