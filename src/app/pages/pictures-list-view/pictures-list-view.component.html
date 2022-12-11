@@ -1,4 +1,4 @@
-<h1>Pictures</h1>
+<h1>Pictures ({{pictures.length}})</h1>
 <app-loading [showLoading]="apiResponse.loading"></app-loading>
 <div *ngFor="let picture of pictures; let index = index">
     <app-picture [picture]="picture" [index]="index+1" (click)="showDetails(index+1)"></app-picture>
