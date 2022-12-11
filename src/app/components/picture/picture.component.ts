@@ -9,8 +9,9 @@ import Picture from 'src/app/models/Picture/Picture';
 })
 export class PictureComponent implements OnChanges {
   @Input() picture: Picture = new Picture({});
+  @Input() index: number = -1;
+  @Input() height: number = 200;
   loaded: boolean = false
-  height: number = 200;
   width: number = 0;
 
   ngOnChanges(changes: SimpleChanges): void {

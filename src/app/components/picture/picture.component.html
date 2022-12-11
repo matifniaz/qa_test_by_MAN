@@ -1,10 +1,16 @@
+<app-loading [showLoading]="picture.height===0"></app-loading>
 <div class="image-thumb" [ngStyle]="{width:width+'px'}">
     <div class="image-container">
-        <img [ngClass]="{hidden: !loaded}"  src="{{picture.downloadUrl}}" alt="{{picture.author}}" (load)="setLoaded()" [ngStyle]="{width:width+'px',height:height+'px'}" />
+        <img [ngClass]="{hidden: !loaded}"  
+            src="{{picture.downloadUrl}}" 
+            alt="{{picture.author}}" 
+            (load)="setLoaded()" 
+            [ngStyle]="{width:width+'px',height:height+'px'}" />
     </div>
-    <div class="display-block" >
+    <div class="display-block" *ngIf="picture.height>0">
         <div class="info-container">
-            <span *ngIf="picture.canBeDownloaded===false">Only: {{picture.width}} x {{picture.height}}</span>
+            <span>{{index}}) {{picture.author}}</span>
+            <span *ngIf="picture.canBeDownloaded===false">No download</span>
             <span 
                 *ngIf="picture.canBeDownloaded" 
                 class="button download"

@@ -14,7 +14,7 @@ class Picture extends Asset {
         this.canBeDownloaded = this.checkIfCanBeDownloaded()
     }
     checkIfCanBeDownloaded():boolean{
-        if(this.width>1999 && this.height>1999){
+        if( ((this.width * this.height) > 4*Math.pow(10,6)) && this.width > 2000){
             return true
         }
         return false

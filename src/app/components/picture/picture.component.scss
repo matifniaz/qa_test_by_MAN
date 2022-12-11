@@ -1,19 +1,19 @@
 @import '../../globalVars.scss';
-$thumbHeight: 220;
-$imgHeight: 200;
+// $thumbHeight: 220;
+// $imgHeight: 200;
 
 .image-thumb {
-    height: $thumbHeight+px;
+    // height: $thumbHeight+px;
     float: left;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
     border: solid 1px $backgroundColorSecondary;
     & .image-container {
         background-color: $backgroundColorSecondary;
     }
     img {
-        height: $imgHeight+px;
+        // height: $imgHeight+px;
         width: auto;
         display: block;
         &:hover{
@@ -23,15 +23,21 @@ $imgHeight: 200;
     }
 }
 .info-container {
-    height: ($thumbHeight - $imgHeight)+px;
+    // height: ($thumbHeight - $imgHeight)+px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: (($thumbHeight - $imgHeight)*.6)+px;
-    line-height: (($thumbHeight - $imgHeight)*.7)+px;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 1em;
+    & .download {
+        text-decoration: underline;
+    }
+    // font-size: (($thumbHeight - $imgHeight)*.6)+px;
+    // line-height: (($thumbHeight - $imgHeight)*.7)+px;
 }
 
 @keyframes zoom {
     from { transform: scale(1); }
-    to { transform: scale(1.02); }
+    to { transform: scale(1.01); }
 }
