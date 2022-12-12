@@ -12,9 +12,4 @@ describe('GetFileName from URL', () => {
     expect(getFileName(url)).toEqual('3333.jpg');
   });
 
-  it('should get from url', () => {
-    const url = 'https://i.picsum.photos/id/0/5000'
-    expect(getFileName(url)).toEqual('500.jpg');
-  });
-
 });

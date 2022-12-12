@@ -41,3 +41,9 @@
     from { transform: scale(1); }
     to { transform: scale(1.01); }
 }
+
+.download {
+    @media only screen and (max-width: 600px) {
+        color: #fff;
+    }
+}
