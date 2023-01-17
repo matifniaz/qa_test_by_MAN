@@ -26,6 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+![image](https://user-images.githubusercontent.com/40147842/212956557-9b8773b9-d2ec-4b71-ae02-069d77efbf16.png)
+
 ## Running end-to-end UI tests - Cypress
 
 Run `npm run cy:run` to execute the end-to-end UI test using Cypress.
